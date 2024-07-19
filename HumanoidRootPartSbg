@@ -1,0 +1,15 @@
+-- Place this script in a LocalScript inside StarterPlayerScripts
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local player = Players.LocalPlayer
+
+-- Function to send a message to the chat
+local function sendMessage(message)
+    ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+end
+
+-- Send the messages
+sendMessage("KILLER MOVE")
+wait(1) -- Wait for 1 second
+sendMessage("SERIOUS PUNCH")
